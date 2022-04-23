@@ -8,7 +8,8 @@
     --text-color:#757575;
     --accent-color:#2196F3;
     --team-backgroundcolor:#F5F4FA;
-    --footer-color:#ffffff;}
+    --footer-color:#ffffff;
+    --icon-color:#AFB1B8}
  
 body {
     font-family: 'Roboto','Tahoma', sans-serif;
@@ -39,7 +40,7 @@ ol {
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 .visually-hidden {
     position: absolute;
@@ -139,7 +140,10 @@ ol {
 .header-tel:focus {
     color: var(--accent-color);
 }
-
+.contacts-icon{
+    fill:currentColor;
+    margin-right: 10px;
+}
 /*-------------------hero---------------------*/
 .hero{
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
@@ -205,7 +209,13 @@ ol {
 }
 .features .features-list:not(:last-child){
     margin-right: 30px;
-
+}
+.features-picture{
+    width: 270px;
+    height: 120px;
+    background-color: #F5F4FA;
+    margin-bottom: 30px;
+    padding: 25px 100px 25px 100px;
 }
 .features-title{
     font-weight: 700;
@@ -221,6 +231,9 @@ ol {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+}
+.features-icon{
+    color: var(--icon-color);
 }
 /*----------------------job-------------------------------*/
 
@@ -253,6 +266,10 @@ ol {
 }
 .team-item{
     background-color: var(--footer-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
     padding-bottom: 30px;
 }
 .team-list .team-item:not(:last-child){
@@ -294,27 +311,27 @@ ol {
     justify-content: center;
     margin-top: 6px;
 }
+
 .team-soc-item:not(last-child){
     margin-right: 10px;
 }
 .team-soc-link{
     width: 44px;
     height: 44px;
-    /* background-color: #ffffff); */
     background-color: #ffffff;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    color:var(--icon-color);
 }
+.team-soc-link:hover {
+    background-color: var(--accent-color);
+    color:#ffffff;
+}
+
 .team-soc-icon{
-    fill:#AFB1B8
-}
-.team-soc-link:hover{
-background-color: var(--accent-color);
-}
-.team-soc-link:hover .team-soc-icon{
-    fill: #ffffff;
+    fill: currentColor;
 }
 /* ------------------------clients------------------------------ */
 .clients-title{
@@ -325,28 +342,44 @@ background-color: var(--accent-color);
     color:var(--title-color);
     margin-bottom: 50px;
 }
-.clients{
+.clients-list{
     display: flex;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
 }
-/* .clients-btn{
-
-} */
-.clients-btn .button{
+.clients-item{
     width: 170px;
-    height: 92px;
     border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    padding: 16px 32px 16px 32px;
 }
-.clients-btn:not(:last-child){
+.clients-item:not(:last-child){
     margin-right: 30px;
+}
+.clients-link{
+    width: 100%;
+    height: 100%;
+    color: var(--accent-color)
+}
+.clients-icon{
+    fill: var(--icon-color)
+}
+.clients-icon:hover{
+    fill: currentColor;
 }
 /*-------------------------footer------------------------------*/
 .footer{
+    
     background-color: #2F303A;
     padding-top: 60px;
     padding-bottom: 60px;
+}
+.footer-main{
+    display: flex;
+}
+.footer-contacts{
+    margin-right: 70px;
 }
 
 .footer-logo{
@@ -401,7 +434,45 @@ background-color: var(--accent-color);
 .footer-tel:focus{
     color: var(--accent-color);
 }
+.footer-joinus{
+    margin-top: 12px;
+}
+.footer-title{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    }
+.footer-soc-list {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
 
+.footer-soc-item:not(last-child) {
+    margin-right: 10px;
+}
+
+.footer-soc-link {
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.footer-soc-link:hover {
+    background-color: var(--accent-color);
+}
+
+.footer-soc-icon {
+    fill: currentColor;
+}
 /*--------------------potfolio----------------------------*/
 .examples{
     background-color: var(--footer-color);
@@ -427,6 +498,7 @@ background-color: var(--accent-color);
     background-color: #F5F4FA;
     cursor: pointer;
     border: none;
+    border-radius: 4px;
     padding: 6px 22px 6px 22px;
     
 }
