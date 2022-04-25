@@ -202,6 +202,7 @@ ol {
     flex-wrap: wrap;
     padding-top: 94px;
     padding-bottom: 0;
+    justify-content: center;
 }
 .features-list{
     display: block;
@@ -211,12 +212,15 @@ ol {
     margin-right: 30px;
 }
 .features-picture{
+    display: flex;
     width: 270px;
     height: 120px;
     background-color: #F5F4FA;
     margin-bottom: 30px;
-    padding: 25px 100px 25px 100px;
+    justify-content: center;
+    align-items: center;
 }
+
 .features-title{
     font-weight: 700;
     font-size: 14px;
@@ -265,6 +269,7 @@ ol {
     display: flex;
 }
 .team-item{
+    width: 270px;
     background-color: var(--footer-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -309,10 +314,10 @@ ol {
 .team-soc-list{
     display: flex;
     justify-content: center;
-    margin-top: 6px;
+    margin-top: 16px;
 }
 
-.team-soc-item:not(last-child){
+.team-soc-item:not(:last-child){
     margin-right: 10px;
 }
 .team-soc-link{
@@ -347,28 +352,37 @@ ol {
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 50px;
 }
 .clients-item{
+    display: block;
     width: 170px;
-    border: 1px solid #AFB1B8;
+    height: 92px;
     border-radius: 4px;
-    padding: 16px 32px 16px 32px;
+    border: 1px solid #AFB1B8;
+    /* padding: 16px 32px 16px 32px; */
 }
 .clients-item:not(:last-child){
     margin-right: 30px;
 }
 .clients-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     color: var(--icon-color);
+
 }
 .clients-link:hover,
 .clients-link:focus{
    color: var(--accent-color);
 }
+
 .clients-icon{
     fill: currentColor;
+}
+.clients-item:hover{
+    border: 1px solid var(--accent-color);
 }
 
 /*-------------------------footer------------------------------*/
@@ -483,11 +497,10 @@ ol {
 }
 .examples-btn{
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: center;
     margin-bottom: 50px;
-  
 }
+
 /*кнопки портфолио*/
 .button {
     display: block;
